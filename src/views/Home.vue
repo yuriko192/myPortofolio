@@ -3,6 +3,8 @@
     <personal/>
     <projects/>
     <skills/>
+    <education/>
+    <experience/>
   </div>
 </template>
 
@@ -11,12 +13,16 @@
 import personal from "@/components/Home/Personal Info"
 import projects from "@/components/Home/Projects List"
 import skills from "@/components/Home/Skills List"
+import education from "@/components/Home/Educations List"
+import experience from "@/components/Home/Experiences List"
 export default {
   name: 'Home',
   components: {
     personal,
     projects,
-    skills
+    skills,
+    education,
+    experience
   }
 }
 </script>
