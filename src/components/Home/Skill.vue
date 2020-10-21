@@ -17,9 +17,8 @@ export default {
   props: ["head", "rating", "color"],
   computed: {
     styling() {
-      let strr = "width: " + this.rating + "%; " +
-          "background-color: " + this.color + ";"
-      return strr;
+      return "width: " + this.rating + "%; " +
+          "background-color: " + this.color + ";";
     }
   },
 }

@@ -15,17 +15,19 @@ export default {
 
 <style lang="scss" scoped>
 .personal {
+  padding-top: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-image: linear-gradient(#366c92 0%, #45afd9 10%, rgba(black,0) 100%);
 
   h5 {
     margin: 0;
   }
 
   #profile-pic {
-    width: 300px;
+    width: 200px;
     border-radius: 100%;
   }
 }
