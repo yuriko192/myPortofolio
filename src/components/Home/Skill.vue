@@ -17,8 +17,7 @@ export default {
   props: ["head", "rating", "color"],
   computed: {
     styling() {
-      return "width: " + this.rating + "%; " +
-          "background-color: " + this.color + ";";
+      return `width: ${this.rating}%; background: ${this.color};`;
     }
   },
 }
@@ -26,24 +25,30 @@ export default {
 
 <style lang="scss" scoped>
 .skill {
+  margin: 20px 0;
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  text-align: center;
+  padding: 0 10px;
 
   .head {
     font-size: large;
+    width: max(100px);
   }
 
   .rate_cont {
     display: flex;
-    width: 200px;
-    justify-content: space-between;
+    width: calc(100% - 100px);
+    margin: auto;
+    justify-content: center;
 
     .rate {
-      width: 150px;
+      width: calc(100% - 100px);
       height: 20px;
-      border: solid 1px black;
+      border: solid 3px black;
       border-radius: 10px;
+      margin: auto 20px;
+      background: #2f2f2f;
 
       .ratebar {
         height: 100%;
@@ -53,7 +58,6 @@ export default {
 
     .percent {
       align-self: flex-end;
-      margin: auto 0;
     }
   }
 

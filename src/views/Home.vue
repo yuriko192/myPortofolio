@@ -39,13 +39,11 @@ export default {
   },
   methods: {
     chcolor() {
-      let y = 1 + (window.scrollY || window.pageYOffset) / 150
-      y = y < 1 ? 1 : y // ensure y is always >= 1 (due to Safari's elastic scroll)
-      const [r, g, b] = [69/y, 111/y, 225/(y/2)].map(Math.round)
-      this.color = `background-color: rgb(${r}, ${g}, ${b});`;
-      if ((r+g+b)/3 < 70){
-        this.color+= `color: white;`
-      }
+      let str = 'let y = (window.scrollY || window.pageYOffset) / window.outerHeight\
+      y = 1- y\
+      this.color = `background-color: rgba(69,111,225, ${y});`;\
+      console.log(y)'
+      this.color = `background-color: white);`;
     }
   },
   created() {
@@ -62,6 +60,8 @@ export default {
   align-items: center;
   text-align: center;
   margin-top: 0 !important;
+
+
   .scroll{
     width: 100vw;
     height: 100vh;
@@ -71,13 +71,9 @@ export default {
     margin: 0;
   }
 
-  #profile-pic {
-    width: 300px;
-    border-radius: 100%;
-  }
-
   * {
     margin-bottom: 40px;
+    width: 100%;
   }
 }
 </style>
